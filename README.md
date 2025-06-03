@@ -15,5 +15,5 @@ API REST em .NET para registrar e gerenciar eventos críticos como incêndios, a
 
 ## 👥 Autores
 
-- [Seu Nome]
-- [Nome da Dupla]
+- [Gabriel Eduardo De Paiva Oliveira - RM:98843]
+- [Vicenzo Guardabassi Fukumura - RM: 550208]
