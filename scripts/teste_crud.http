@@ -4,65 +4,30 @@
 ### ===========================================
 
 ### ===========================================
-### 1. READ - Verificar Todas as Ocorrências Criadas
+### 1. CREATE - Criar Nova Ocorrência
+### ===========================================
+irm -Uri http://localhost:5000/api/ocorrencias -Method Post ` -Body '{"tipo": "ENCHENTE", "gravidade": 3, "regiao": "Sudeste"}' ` -ContentType "application/json"
+
+### ===========================================
+### 2. READ - Verificar Todas as Ocorrências Criadas
 ### ===========================================
 # curl.exe http://localhost:5000/api/ocorrencias
 
 ### ===========================================
-### 2. READ - Buscar Ocorrência por ID
+### 3. READ - Buscar Ocorrência por ID
 ### ===========================================
 # curl.exe http://localhost:5000/api/ocorrencias/1
 
 ### ===========================================
-### 3. CREATE - Criar Nova Ocorrência (Tornado)
-### ===========================================
-# curl.exe -X POST http://localhost:5000/api/ocorrencias -H "Content-Type: application/json" -d "{\"titulo\": \"Tornado\", \"descricao\": \"Tornado categoria F2 detectado na região\", \"localizacao\": \"Brasília, DF\", \"tipo\": \"Tornado\", \"gravidade\": 4, \"regiao\": \"Centro-Oeste\"}"
-
-
-### ===========================================
-### 10. UPDATE - Atualizar Incêndio para CONTROLADO (ID 1)
+### 4. UPDATE - Atualizar Incêndio para CONTROLADO (ID 1)
 ### ===========================================
 # curl.exe -X PUT http://localhost:5000/api/ocorrencias/1 -H 'Content-Type: application/json' -d '{\"id\":1,\"tipo\":\"Incendio\",\"gravidade\":1,\"regiao\":\"Norte\"}'
 
-
-
-
-
 ### ===========================================
-### 16. DELETE - Remover Desastre - (ID 3)
+### 5. DELETE - Apagar Ocorrência
 ### ===========================================
 # curl.exe -X DELETE http://localhost:5000/api/ocorrencias/3
 
-
-### ===========================================
-### 17. READ - Verificar Estado Após Deleções
-### ===========================================
-# curl.exe http://localhost:5000/api/ocorrencias
-
-### ===========================================
-### 18. DELETE - Remover Tsunami (ID mais alto)
-### ===========================================
-# curl.exe -X DELETE http://localhost:5000/api/ocorrencias/7
-
-### ===========================================
-### 19. READ - Estado Final dos Dados
-### ===========================================
-# curl.exe http://localhost:5000/api/ocorrencias
-
-### ===========================================
-### 20. TESTE DE ERRO - Buscar ID Inexistente
-### ===========================================
-# curl.exe http://localhost:5000/api/ocorrencias/999
-
-### ===========================================
-### 21. TESTE DE ERRO - Deletar ID Inexistente
-### ===========================================
-# curl.exe -X DELETE http://localhost:5000/api/ocorrencias/999
-
-### ===========================================
-### 22. TESTE DE ERRO - Atualizar ID Inexistente
-### ===========================================
-# curl.exe -X PUT http://localhost:5000/api/ocorrencias/999 -H "Content-Type: application/json" -d "{\"id\": 999, \"titulo\": \"Teste\", \"tipo\": \"Teste\", \"gravidade\": 1, \"regiao\": \"Teste\"}"
 
 ### ===========================================
 ### INSTRUÇÕES DE USO:
