@@ -1,27 +1,73 @@
+### ===========================================
+### PLATAFORMA RESPOSTA DESASTRES - TESTES CRUD
+### Comandos prontos para copiar e colar no PowerShell
+### ===========================================
 
-### Criar ocorrência
-POST http://localhost:5000/api/ocorrencias
-Content-Type: application/json
+### ===========================================
+### 1. READ - Verificar Todas as Ocorrências Criadas
+### ===========================================
+# curl.exe http://localhost:5000/api/ocorrencias
 
-{
-  "tipo": "Incêndio Florestal",
-  "gravidade": 5,
-  "regiao": "Norte"
-}
+### ===========================================
+### 2. READ - Buscar Ocorrência por ID
+### ===========================================
+# curl.exe http://localhost:5000/api/ocorrencias/1
 
-### Buscar todas
-GET http://localhost:5000/api/ocorrencias
+### ===========================================
+### 3. CREATE - Criar Nova Ocorrência (Tornado)
+### ===========================================
+# curl.exe -X POST http://localhost:5000/api/ocorrencias -H "Content-Type: application/json" -d "{\"titulo\": \"Tornado\", \"descricao\": \"Tornado categoria F2 detectado na região\", \"localizacao\": \"Brasília, DF\", \"tipo\": \"Tornado\", \"gravidade\": 4, \"regiao\": \"Centro-Oeste\"}"
 
-### Atualizar ocorrência
-PUT http://localhost:5000/api/ocorrencias/1
-Content-Type: application/json
 
-{
-  "id": 1,
-  "tipo": "Incêndio Florestal",
-  "gravidade": 4,
-  "regiao": "Nordeste"
-}
+### ===========================================
+### 10. UPDATE - Atualizar Incêndio para CONTROLADO (ID 1)
+### ===========================================
+# curl.exe -X PUT http://localhost:5000/api/ocorrencias/1 -H 'Content-Type: application/json' -d '{\"id\":1,\"tipo\":\"Incendio\",\"gravidade\":1,\"regiao\":\"Norte\"}'
 
-### Deletar ocorrência
-DELETE http://localhost:5000/api/ocorrencias/1
+
+
+
+
+### ===========================================
+### 16. DELETE - Remover Desastre - (ID 3)
+### ===========================================
+# curl.exe -X DELETE http://localhost:5000/api/ocorrencias/3
+
+
+### ===========================================
+### 17. READ - Verificar Estado Após Deleções
+### ===========================================
+# curl.exe http://localhost:5000/api/ocorrencias
+
+### ===========================================
+### 18. DELETE - Remover Tsunami (ID mais alto)
+### ===========================================
+# curl.exe -X DELETE http://localhost:5000/api/ocorrencias/7
+
+### ===========================================
+### 19. READ - Estado Final dos Dados
+### ===========================================
+# curl.exe http://localhost:5000/api/ocorrencias
+
+### ===========================================
+### 20. TESTE DE ERRO - Buscar ID Inexistente
+### ===========================================
+# curl.exe http://localhost:5000/api/ocorrencias/999
+
+### ===========================================
+### 21. TESTE DE ERRO - Deletar ID Inexistente
+### ===========================================
+# curl.exe -X DELETE http://localhost:5000/api/ocorrencias/999
+
+### ===========================================
+### 22. TESTE DE ERRO - Atualizar ID Inexistente
+### ===========================================
+# curl.exe -X PUT http://localhost:5000/api/ocorrencias/999 -H "Content-Type: application/json" -d "{\"id\": 999, \"titulo\": \"Teste\", \"tipo\": \"Teste\", \"gravidade\": 1, \"regiao\": \"Teste\"}"
+
+### ===========================================
+### INSTRUÇÕES DE USO:
+### 1. Remova o # do início de cada linha para executar
+### 2. Copie e cole no PowerShell um comando por vez
+### 3. Ou copie a sequência completa do final
+### 4. Aguarde a resposta antes do próximo comando
+### ===========================================

@@ -2754,24 +2754,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Softwares\\Nuget": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\AMD\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\labsfiap\\Desktop\\QuickAlert\\Quickalert\\src\\ProjetoAPI\\ProjetoAPI.csproj",
+      "projectUniqueName": "C:\\Users\\AMD\\WORKSPACE_GS\\Quickalert\\src\\ProjetoAPI\\ProjetoAPI.csproj",
       "projectName": "PlataformaRespostaDesastres",
-      "projectPath": "C:\\Users\\labsfiap\\Desktop\\QuickAlert\\Quickalert\\src\\ProjetoAPI\\ProjetoAPI.csproj",
-      "packagesPath": "C:\\Softwares\\Nuget",
-      "outputPath": "C:\\Users\\labsfiap\\Desktop\\QuickAlert\\Quickalert\\src\\ProjetoAPI\\obj\\",
+      "projectPath": "C:\\Users\\AMD\\WORKSPACE_GS\\Quickalert\\src\\ProjetoAPI\\ProjetoAPI.csproj",
+      "packagesPath": "C:\\Users\\AMD\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AMD\\WORKSPACE_GS\\Quickalert\\src\\ProjetoAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "c:\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\AMD\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2779,7 +2774,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2847,7 +2841,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlataformaRespostaDesastres")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d33ef658f5c0379f3c5c52304ee0ebab78363201")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51f9479f61f6bc2664c8a91be02e4af60a41998e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlataformaRespostaDesastres")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlataformaRespostaDesastres")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
