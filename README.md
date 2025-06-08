@@ -13,24 +13,23 @@ API REST em .NET para registrar e gerenciar eventos críticos como incêndios, a
 
 ...
 
-Lista de comando em ordem para rodar o projeto
+=== Lista de comando em ordem para rodar o projeto ===
+
 # Criar volume
 docker volume create postgres_data
 
 # Criar conexão para os containers
-
 docker network create plataforma-network
 
 # Executar banco
 docker run -d --name postgres-db --network plataforma-network -e POSTGRES_DB=plataforma_desastres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=senha123 -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres:15
 
 
-
 # Build da aplicação
 docker build -t plataforma-api .
 
 # Executar aplicação
-#teste# docker run -d --name plataforma-app  --network plataforma-network -p 5000:5000 plataforma-api
+docker run -d --name plataforma-app  --network plataforma-network -p 5000:5000 plataforma-api
 
 
 
@@ -38,7 +37,6 @@ docker build -t plataforma-api .
 
 # Conectar com o banco
 docker exec -it postgres-db psql -U admin -d plataforma_desastres
-
 
 # Parar containers
 docker stop plataforma-app postgres-db
