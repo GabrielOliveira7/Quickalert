@@ -67,15 +67,11 @@ CREATE TABLE "Ocorrencias" (
     "Regiao" VARCHAR(100) NOT NULL,
     "DataCriacao" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
-
--- Inserção de teste
-INSERT INTO "Ocorrencias" ("Tipo", "Gravidade", "Regiao")
-VALUES
-    ('ENCHENTE', 3, 'Sudeste'),
-    ('DESLIZAMENTO', 2, 'Sul');
-
 -- Verificar
 SELECT * FROM "Ocorrencias";
+
+
+
 
 
 Se chegou aqui provavelmente o crud dara certo, entao so testar e conferir a persistencia de dados!
